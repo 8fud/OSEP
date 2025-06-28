@@ -17,3 +17,10 @@ A flexible XOR + AES (AES-256-CTR) encryptor for shellcode, payloads, or strings
 ## Example Usage
 
 ### XOR with random key, C array output
+python3 encryptor.py --mode xor --input shellcode.bin --randkey 16 --outfmt carray --output encrypted.c
+
+### AES with passphrase key, hex output
+python3 encryptor.py --mode aes --string "HelloWorld" --key SuperSecret123 --outfmt hex
+
+### PowerShell array output
+python3 encryptor.py --mode xor --input shellcode.bin --key myXORkey --outfmt psarray --output payload.ps1
